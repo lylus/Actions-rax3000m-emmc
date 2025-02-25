@@ -71,8 +71,7 @@ jobs:
       run: |
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
-        echo $PATH
-$GITHUB_WORKSPACE/openwrt/staging_dir/target-x86_64_glibc_custom/host/cargo/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+        echo $PATH $GITHUB_WORKSPACE/openwrt/staging_dir/target-x86_64_glibc_custom/host/cargo/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
     - name: 开启缓存
       uses: klever1988/cachewrtbuild@main
